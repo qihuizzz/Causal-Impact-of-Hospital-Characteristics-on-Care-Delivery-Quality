@@ -43,10 +43,11 @@ We use an instrumental variable (IV) strategy. Specifically, the distance to the
 3. CT – Computed Tomography Scan  
 4. LCME – Liaison Committee on Medical Education  
 </sub>
+  
+**Variable Dictionary**
 
 <small>
   
-**Variable Dictionary**
 | Variable                | Description                                                                                  | Source / Construction                                                                                                     | Interpretation                                                                                       |
 |-------------------------|----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
 | **Independent Variable: Hospital Quality** |                                                                                              |                                                                                                                           |                                                                                                       |
