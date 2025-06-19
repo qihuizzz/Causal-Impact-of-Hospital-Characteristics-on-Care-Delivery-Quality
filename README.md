@@ -46,6 +46,7 @@ We use an instrumental variable (IV) strategy. Specifically, the distance to the
 
 **Variable Dictionary**
 
+<div style="font-size: 70%;">
 | Variable                | Description                                                                                  | Source / Construction                                                                                                     | Interpretation                                                                                       |
 |-------------------------|----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
 | **Independent Variable: Hospital Quality** |                                                                                              |                                                                                                                           |                                                                                                       |
@@ -58,6 +59,8 @@ We use an instrumental variable (IV) strategy. Specifically, the distance to the
 | Colo_followup_rate      | Follow-up rate after a positive colonoscopy screening                                        | Based on OP_33 or a related quality measure                                                                               | A proxy for outpatient care coordination. Higher rates reflect better continuity of care.            |
 | Sepsis_Care_Index       | Composite score of sepsis management quality                                                 | Combined from 5 sepsis-related measures (SEP_1, SEP_SH_3HR, SEP_SH_6HR, SEV_SEP_3HR, SEV_SEP_6HR), averaged and standardized | Higher scores indicate better adherence to clinical protocols for time-sensitive emergency care.     |
 | ECQM_Index_Std          | Composite index of electronic clinical quality measures (eCQMs)                              | Standardized average of 12 CMS-reported eCQM components                                                                   | A proxy for digital infrastructure and clinical process quality. Higher values indicate better digital monitoring and compliance. |
+
+</div>
 
 ### 📊 Data Sources
 #### 🏥 Hospital Level Data (CMS)
@@ -99,16 +102,20 @@ We focus exclusively on hospitals located in the contiguous United States, as he
 # 4. Data Analysis
 ## 4.1. Buffer Zone Analysis
 **Distribution of Hospital-level Variables (30 Miles Buffer)**
+
 <img src="https://github.com/user-attachments/assets/23188ad5-a587-4da5-bed6-b59370f99b0e" width="600"/>
 
 **Comparison of service coverage of urban and rural hospitals at different radii in Illinois**
+
 <img src="https://github.com/user-attachments/assets/1cd1fe02-bbd8-4d76-a645-c724609c6d0c" width="600"/>
 
 **Matrix of Hospital Quality and Demand at the County Level**
+
 <img src="https://github.com/user-attachments/assets/95d285a2-3b7d-4d18-81c2-5c0baaad0e8a" width="600"/>
 
 **IV Results on Different Buffers (10-30 miles)**
 - To assess how proximity to medical schools affects hospital quality, we examine the strength of our instrument—distance to the nearest medical school—under different buffer sizes. As the service area expands, the instrument’s explanatory power increases, suggesting broader physician networks and academic influence.
+
 #### 📈 Regression Results for ED_Wait_Index under Different Buffer Zones
 
 | Buffer Zone | Coefficient | Std. Err. | P-value |
@@ -122,6 +129,7 @@ We focus exclusively on hospitals located in the contiguous United States, as he
 > **Note:** The table summarizes the estimated coefficients of the hospital quality variable on the ED_Wait_Index across different geographic buffer zones (10 to 30 miles). A positive coefficient indicates longer ED wait times associated with higher CMS hospital quality ratings, though the results vary in statistical significance.
 
 <img src="https://github.com/user-attachments/assets/5b34d2d2-1550-41f8-a408-8190b0487e97" width="300"/>
+
 - OLS regression underestimates the impact of hospital quality on emergency department waiting times. IV regression results suggest that high-quality hospitals significantly reduce patients' average waiting time in the emergency department, although there is some uncertainty in the estimates
 
 **IV Results on Different Buffers: Let’s focus on 30 miles buffer**
@@ -130,17 +138,20 @@ We focus exclusively on hospitals located in the contiguous United States, as he
 <img src="https://github.com/user-attachments/assets/983a6521-2b58-4885-97d2-43a1368cb112" width="400"/>
 
 **Geographic Distribution of Regression Residuals for Wait Time Index**
+
 <img src="https://github.com/user-attachments/assets/031e0c5b-92c7-4577-85de-227eb0cb4841" width="600"/>
 
 ## 4.2. Voronoi Polygons Analysis
 **EMS & Hospital Points**
 - We use **Voronoi polygons** to define each hospital’s primary service area based on spatial proximity—assigning geographic regions to the nearest hospital. This method approximates real-world patient flow by capturing **catchment areas** without relying on administrative boundaries.
+  
 <img src="https://github.com/user-attachments/assets/25addd23-d44e-4527-b99a-ed9e1f9df09c" width="600"/>
 
 **Key Variable Distributions among Voronoi Polygons**
+
 <img src="https://github.com/user-attachments/assets/486c292c-6e84-443a-8c0d-5a9c14d485e0" width="600"/>
 
-**IV Results on Voronoi Hospital Areas (full model, control for rural/urban indicator)**
+**IV Results on Voronoi Hospital Areas (full model, control for rural/urban indicator)**
 
 #### 📊 Regression Results (Full Model)
 
@@ -225,11 +236,11 @@ Compared to buffer zones or Voronoi polygons, which rely purely on geographic pr
 - Consider instrument heterogeneity by testing alternative IVs or multi-instrument strategies
 
 # Reference
-Institute of Medicine (IOM, now the National Academy of Medicine). (2001). Crossing the Quality Chasm: A New Health System for the 21st Century.
+- Institute of Medicine (IOM, now the National Academy of Medicine). (2001). Crossing the Quality Chasm: A New Health System for the 21st Century.
 
-Zuckerman et al. (2016). “Readmissions, Observation, and the Hospital Readmissions Reduction Program.” New England Journal of Medicine, 374(16), 1544-1551.
+- Zuckerman et al. (2016). “Readmissions, Observation, and the Hospital Readmissions Reduction Program.” New England Journal of Medicine, 374(16), 1544-1551.
 
-The White House. (2025, February). Establishing the President’s Make America Healthy Again Commission. https://www.whitehouse.gov/presidential-actions/2025/02/establishing-the-presidents-make-america-healthy-again-commission/
+- The White House. (2025, February). Establishing the President’s Make America Healthy Again Commission. https://www.whitehouse.gov/presidential-actions/2025/02/establishing-the-presidents-make-america-healthy-again-commission/
 
-Department of Health and Human Services. (2025, February 6). Private equity in healthcare: Report highlights concerns and calls for oversight. The Guardian. https://www.theguardian.com/us-news/2025/feb/06/private-equity-healthcare
+- Department of Health and Human Services. (2025, February 6). Private equity in healthcare: Report highlights concerns and calls for oversight. The Guardian. https://www.theguardian.com/us-news/2025/feb/06/private-equity-healthcare
 
