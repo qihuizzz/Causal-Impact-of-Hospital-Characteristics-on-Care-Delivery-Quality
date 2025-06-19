@@ -45,7 +45,7 @@ We use an instrumental variable (IV) strategy. Specifically, the distance to the
 </sub>
   
 #### 📘 Variable Dictionary
-
+<sub>
 **Independent Variable: Hospital Quality**
 - `Hospital_overall_rating`: Composite CMS rating of overall hospital performance  
   *Source:* Aggregated from mortality, safety, readmission, and patient experience  
@@ -73,6 +73,7 @@ We use an instrumental variable (IV) strategy. Specifically, the distance to the
 
 - `ECQM_Index_Std`: Composite of 12 eCQM measures  
   *Interpretation:* Higher = better digital clinical quality  
+<sub>
 
 ### 📊 Data Sources
 #### 🏥 Hospital Level Data (CMS)
