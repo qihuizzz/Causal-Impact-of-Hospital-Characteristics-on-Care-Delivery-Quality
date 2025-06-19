@@ -45,34 +45,49 @@ We use an instrumental variable (IV) strategy. Specifically, the distance to the
 </sub>
   
 #### 📘 Variable Dictionary
+
 <sub>
+  
 **Independent Variable: Hospital Quality**
-- `Hospital_overall_rating`: Composite CMS rating of overall hospital performance  
+
+- `Hospital_overall_rating`: Composite CMS rating of overall hospital performance
+  
   *Source:* Aggregated from mortality, safety, readmission, and patient experience  
+
   *Interpretation:* 1–4 stars; higher = better quality  
 
 **Dependent Variables: Hospital Outcomes**
+
 - `ED_Wait_Index`: Composite index of ED wait times  
+
   *Source:* OP_18b and OP_18c  
+
   *Interpretation:* Lower = longer wait; may indicate inefficiency  
 
 - `ED_volumn_score`: Categorical ED volume (1–4)  
+
   *Interpretation:* Higher = more patient demand  
 
 - `Head_Score`: % of timely return of head CT in ED  
+
   *Interpretation:* Higher = better diagnostic efficiency  
 
 - `Lwbs_Rate`: % patients left ED without being seen  
+
   *Interpretation:* Higher = poor throughput or dissatisfaction  
 
 - `Colo_followup_rate`: Follow-up after positive colonoscopy  
+
   *Interpretation:* Higher = better outpatient coordination  
 
 - `Sepsis_Care_Index`: Composite score from 5 sepsis measures  
+
   *Interpretation:* Higher = better adherence to emergency protocols  
 
 - `ECQM_Index_Std`: Composite of 12 eCQM measures  
+
   *Interpretation:* Higher = better digital clinical quality  
+
 <sub>
 
 ### 📊 Data Sources
