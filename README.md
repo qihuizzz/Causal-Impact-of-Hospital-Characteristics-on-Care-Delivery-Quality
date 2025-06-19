@@ -44,24 +44,35 @@ We use an instrumental variable (IV) strategy. Specifically, the distance to the
 4. LCME – Liaison Committee on Medical Education  
 </sub>
   
-**Variable Dictionary**
+#### 📘 Variable Dictionary
 
-<small>
-  
-| Variable                | Description                                                                                  | Source / Construction                                                                                                     | Interpretation                                                                                       |
-|-------------------------|----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| **Independent Variable: Hospital Quality** |                                                                                              |                                                                                                                           |                                                                                                       |
-| Hospital_overall_rating | Composite CMS rating of overall hospital performance                                          | Aggregated from four domains: mortality, safety, readmission, patient experience                                          | Ranges from 1 to 4 stars; higher scores indicate better overall quality                              |
-| **Dependent Variable: Hospital Outcome**   |                                                                                              |                                                                                                                           |                                                                                                       |
-| ED_Wait_Index           | Composite index of Emergency Department (ED) wait times                                       | Standardized combination of OP_18b (arrival-to-provider time) and OP_18c (arrival-to-departure time)                      | A lower score indicates longer wait times. May reflect hospital crowding or inefficiency.            |
-| ED_volumn_score         | Categorical ED volume indicator                                                              | Derived from EDV (coded from Low, Medium, High, Very High to 1–4)                                                         | A proxy for patient demand. Higher scores indicate higher ED visit volume.                           |
-| Head_Score              | Rate of timely return of head CT results in the ED                                           | Based on OP_29 or similar CMS measure                                                                                     | A higher percentage indicates faster imaging diagnostics and more efficient ED operations.           |
-| Lwbs_Rate               | Percentage of patients who left the ED without being seen                                    | From CMS measure OP_22                                                                                                     | Higher rates suggest excessive wait times and reflect poor patient throughput or satisfaction.       |
-| Colo_followup_rate      | Follow-up rate after a positive colonoscopy screening                                        | Based on OP_33 or a related quality measure                                                                               | A proxy for outpatient care coordination. Higher rates reflect better continuity of care.            |
-| Sepsis_Care_Index       | Composite score of sepsis management quality                                                 | Combined from 5 sepsis-related measures (SEP_1, SEP_SH_3HR, SEP_SH_6HR, SEV_SEP_3HR, SEV_SEP_6HR), averaged and standardized | Higher scores indicate better adherence to clinical protocols for time-sensitive emergency care.     |
-| ECQM_Index_Std          | Composite index of electronic clinical quality measures (eCQMs)                              | Standardized average of 12 CMS-reported eCQM components                                                                   | A proxy for digital infrastructure and clinical process quality. Higher values indicate better digital monitoring and compliance. |
+**Independent Variable: Hospital Quality**
+- `Hospital_overall_rating`: Composite CMS rating of overall hospital performance  
+  *Source:* Aggregated from mortality, safety, readmission, and patient experience  
+  *Interpretation:* 1–4 stars; higher = better quality  
 
-</small>
+**Dependent Variables: Hospital Outcomes**
+- `ED_Wait_Index`: Composite index of ED wait times  
+  *Source:* OP_18b and OP_18c  
+  *Interpretation:* Lower = longer wait; may indicate inefficiency  
+
+- `ED_volumn_score`: Categorical ED volume (1–4)  
+  *Interpretation:* Higher = more patient demand  
+
+- `Head_Score`: % of timely return of head CT in ED  
+  *Interpretation:* Higher = better diagnostic efficiency  
+
+- `Lwbs_Rate`: % patients left ED without being seen  
+  *Interpretation:* Higher = poor throughput or dissatisfaction  
+
+- `Colo_followup_rate`: Follow-up after positive colonoscopy  
+  *Interpretation:* Higher = better outpatient coordination  
+
+- `Sepsis_Care_Index`: Composite score from 5 sepsis measures  
+  *Interpretation:* Higher = better adherence to emergency protocols  
+
+- `ECQM_Index_Std`: Composite of 12 eCQM measures  
+  *Interpretation:* Higher = better digital clinical quality  
 
 ### 📊 Data Sources
 #### 🏥 Hospital Level Data (CMS)
