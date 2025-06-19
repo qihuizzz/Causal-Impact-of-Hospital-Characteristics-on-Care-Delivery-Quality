@@ -61,6 +61,7 @@ We use an instrumental variable (IV) strategy. Specifically, the distance to the
 | ECQM_Index_Std          | Composite index of electronic clinical quality measures (eCQMs)                              | Standardized average of 12 CMS-reported eCQM components                                                                   | A proxy for digital infrastructure and clinical process quality. Higher values indicate better digital monitoring and compliance. |
 <div style="font-size: 70%;">
 </div>
+</div>
 
 ### 📊 Data Sources
 #### 🏥 Hospital Level Data (CMS)
