@@ -88,7 +88,7 @@ We use an instrumental variable (IV) strategy. Specifically, the distance to the
 
   *Interpretation:* Higher = better digital clinical quality  
 
-<sub>
+</sub>
 
 ### 📊 Data Sources
 #### 🏥 Hospital Level Data (CMS)
