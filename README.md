@@ -16,10 +16,12 @@ We use an instrumental variable (IV) strategy. Specifically, the distance to the
 - For each hospital, create 10-miles/15-miles/20-miles/25-miles/30-miles buffer zones
 - Overlay with census & EMS data to construct hospital-level controls(Main analysis at hospital level)
 - Robustness: Repeat on rural/urban hospitals only
+  
 **(2) Voronoi-based Service Area (Robustness Model)**
 - Construct Voronoi polygons: each hospital "owns" the area nearest to it
 - Overlay with census & EMS data (Also at the hospital level)
 - Useful to address spatial distortion (e.g. overlapping buffers or MAUP)
+  
 **(3) Hospital Service Areas (HSA) – Zone-Level Analysis**
 - Use NHS-defined HSAs (each may contain multiple hospitals)
 - Aggregate hospital quality/outcomes to the HSA level
@@ -29,28 +31,10 @@ We use an instrumental variable (IV) strategy. Specifically, the distance to the
 
 **Model Setup**
 **Variables Overview**
-| Type                       | Variable Description                                                                 |
-|----------------------------|--------------------------------------------------------------------------------------|
-| **Independent Variable**   | Hospital quality (CMS star rating)                                                  |
-| **Dependent Variables**    | 7 Outcomes published by CMS:                                                        |
-|                            | - Average ED wait time index                                                        |
-|                            | - ED volume                                                                         |
-|                            | - % patients leaving before being seen                                              |
-|                            | - Head CT results follow-up rate                                                    |
-|                            | - Colonoscopy follow-up rate                                                        |
-|                            | - Electronic Clinical Quality Index                                                 |
-|                            | - Sepsis Care Index                                                                 |
-| **Control Variables**      | From ACS and EMS data:                                                              |
-|                            | - Total population                                                                  |
-|                            | - % over age 65                                                                     |
-|                            | - % uninsured or on Medicaid                                                        |
-|                            | - % with a bachelor’s degree or higher                                              |
-|                            | - % below the poverty line                                                          |
-|                            | - % Black or % non-white                                                            |
-|                            | - Urban/rural dummy                                                                 |
-|                            | - Hospital Ownership                                                                |
-|                            | - EMS facility density                                                              |
-| **Instrumental Variable (IV)** | Distance to the nearest medical school                                         |
+
+| **Independent Variable**               | **Dependent Variables (CMS Outcomes)**                                                                                                                                                                                                                                   | **Control Variables (ACS & EMS)**                                                                                                                                                                                                                                      | **Instrumental Variable (IV)**                          |
+|----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
+| Hospital quality (CMS star rating)     | - Average ED wait time index  <br> - ED volume  <br> - % patients leaving before being seen  <br> - Head CT results follow-up rate  <br> - Colonoscopy follow-up rate  <br> - Electronic Clinical Quality Index  <br> - Sepsis Care Index                            | - Total population  <br> - % over age 65  <br> - % uninsured or on Medicaid  <br> - % with a bachelor’s degree or higher  <br> - % below the poverty line  <br> - % Black or % non-white  <br> - Urban/rural dummy  <br> - Hospital Ownership  <br> - EMS facility density | Distance to the nearest medical school                  |
 
 <sub>
 **Notes**  
