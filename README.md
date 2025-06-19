@@ -44,9 +44,9 @@ We use an instrumental variable (IV) strategy. Specifically, the distance to the
 4. LCME – Liaison Committee on Medical Education  
 </sub>
 
-**Variable Dictionary**
-
 <div style="font-size: 70%;">
+
+**Variable Dictionary**
 | Variable                | Description                                                                                  | Source / Construction                                                                                                     | Interpretation                                                                                       |
 |-------------------------|----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
 | **Independent Variable: Hospital Quality** |                                                                                              |                                                                                                                           |                                                                                                       |
