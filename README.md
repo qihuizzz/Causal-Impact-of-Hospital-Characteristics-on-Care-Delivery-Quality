@@ -82,17 +82,19 @@ We use an instrumental variable (IV) strategy. Specifically, the distance to the
 # 3. Data Preprocessing
 **Initial Cleaning**
 We focus exclusively on hospitals located in the contiguous United States, as healthcare systems, accessibility, and demographic characteristics in Alaska, Hawaii, and Puerto Rico differ substantially from those on the mainland. As a result, we excluded a total of 11 hospitals from Alaska, Hawaii, and Puerto Rico, leaving 2,671 hospitals in our final analysis sample.
-![image](https://github.com/user-attachments/assets/449c779b-111b-4955-8f4e-f07d09d61e19)
+
+<img src="https://github.com/user-attachments/assets/449c779b-111b-4955-8f4e-f07d09d61e19" width="400"/>
 
 **Outliers**
 - Following conventional practice and in order to retain more observations, we excluded extreme values for the standardized outcome variables using the mean ± 3 standard deviations rule.
 - Note: Given that measures such as the colonoscopy follow-up rate may naturally exhibit extreme values, we did not apply this exclusion to other variables. A total of 64 observations were removed as a result.
-![image](https://github.com/user-attachments/assets/9de65b88-6e11-4d90-9a34-b196066f484f)
+
+<img src="https://github.com/user-attachments/assets/9de65b88-6e11-4d90-9a34-b196066f484f" width="400"/>
 
 **Multicollinearity**
 - In assessing multicollinearity, we generated a heatmap for all variables, as shown in the figure on the right.
 - Given the high correlation between total population and EMS count, as well as between percent white and percent Black, we included only total population (instead of EMS count) and percent white (instead of percent Black) in the final model to avoid multicollinearity.
-![image](https://github.com/user-attachments/assets/c2c2e137-f4d1-4ce4-a739-fc2f4da75842)
+<img src="https://github.com/user-attachments/assets/c2c2e137-f4d1-4ce4-a739-fc2f4da75842" width="400"/>
 
 # 4. Data Analysis
 ## 4.1. Buffer Zone Analysis
@@ -119,13 +121,13 @@ We focus exclusively on hospitals located in the contiguous United States, as he
 
 > **Note:** The table summarizes the estimated coefficients of the hospital quality variable on the ED_Wait_Index across different geographic buffer zones (10 to 30 miles). A positive coefficient indicates longer ED wait times associated with higher CMS hospital quality ratings, though the results vary in statistical significance.
 
-![image](https://github.com/user-attachments/assets/5b34d2d2-1550-41f8-a408-8190b0487e97)
+<img src="https://github.com/user-attachments/assets/5b34d2d2-1550-41f8-a408-8190b0487e97" width="300"/>
 - OLS regression underestimates the impact of hospital quality on emergency department waiting times. IV regression results suggest that high-quality hospitals significantly reduce patients' average waiting time in the emergency department, although there is some uncertainty in the estimates
 
 **IV Results on Different Buffers: Let’s focus on 30 miles buffer**
 - The effect is particularly pronounced in **urban hospitals**, where close integration between teaching institutions and hospitals is more common. In contrast, **rural hospitals exhibit no significant association**, which may reflect geographic isolation, weaker institutional ties, or distinct healthcare delivery models. This urban–rural divergence highlights the importance of context in evaluating policy levers like academic infrastructure as drivers of care quality.
 
-![1750368870737](https://github.com/user-attachments/assets/983a6521-2b58-4885-97d2-43a1368cb112)
+<img src="https://github.com/user-attachments/assets/983a6521-2b58-4885-97d2-43a1368cb112" width="400"/>
 
 **Geographic Distribution of Regression Residuals for Wait Time Index**
 <img src="https://github.com/user-attachments/assets/031e0c5b-92c7-4577-85de-227eb0cb4841" width="600"/>
@@ -136,7 +138,7 @@ We focus exclusively on hospitals located in the contiguous United States, as he
 <img src="https://github.com/user-attachments/assets/25addd23-d44e-4527-b99a-ed9e1f9df09c" width="600"/>
 
 **Key Variable Distributions among Voronoi Polygons**
-![image](https://github.com/user-attachments/assets/486c292c-6e84-443a-8c0d-5a9c14d485e0)
+<img src="https://github.com/user-attachments/assets/486c292c-6e84-443a-8c0d-5a9c14d485e0" width="600"/>
 
 **IV Results on Voronoi Hospital Areas (full model, control for rural/urban indicator)**
 
