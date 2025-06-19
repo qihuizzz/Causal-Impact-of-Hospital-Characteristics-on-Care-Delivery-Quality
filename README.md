@@ -44,8 +44,8 @@ We use an instrumental variable (IV) strategy. Specifically, the distance to the
 4. LCME – Liaison Committee on Medical Education  
 </sub>
 
-<div style="font-size: 70%;">
-
+<small>
+  
 **Variable Dictionary**
 | Variable                | Description                                                                                  | Source / Construction                                                                                                     | Interpretation                                                                                       |
 |-------------------------|----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
@@ -59,9 +59,8 @@ We use an instrumental variable (IV) strategy. Specifically, the distance to the
 | Colo_followup_rate      | Follow-up rate after a positive colonoscopy screening                                        | Based on OP_33 or a related quality measure                                                                               | A proxy for outpatient care coordination. Higher rates reflect better continuity of care.            |
 | Sepsis_Care_Index       | Composite score of sepsis management quality                                                 | Combined from 5 sepsis-related measures (SEP_1, SEP_SH_3HR, SEP_SH_6HR, SEV_SEP_3HR, SEV_SEP_6HR), averaged and standardized | Higher scores indicate better adherence to clinical protocols for time-sensitive emergency care.     |
 | ECQM_Index_Std          | Composite index of electronic clinical quality measures (eCQMs)                              | Standardized average of 12 CMS-reported eCQM components                                                                   | A proxy for digital infrastructure and clinical process quality. Higher values indicate better digital monitoring and compliance. |
-<div style="font-size: 70%;">
-</div>
-</div>
+
+</small>
 
 ### 📊 Data Sources
 #### 🏥 Hospital Level Data (CMS)
