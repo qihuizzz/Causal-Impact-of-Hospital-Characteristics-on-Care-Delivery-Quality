@@ -5,7 +5,7 @@
 <img src="https://github.com/user-attachments/assets/c0e836c3-7bf2-4b79-941f-75edeb68908d" width="400"/>
 
 # 1. Problem Statement
-Hospital quality has been identified as a major determinant of patient outcomes and a central focus of U.S. health policy reforms (Institute of Medicine, 2001; Zuckerman et al., 2016). It directly impacts clinical outcomes, patient satisfaction, and resource allocation. However, estimating the true effect of hospital quality on healthcare outcomes is challenging due to potential endogeneity and the spatial uncertainty of hospital service areas. Therefore, **our key question is: Does higher hospital quality causally improve patient outcomes?**
+Hospital quality has  identified as a major determinant of patient outcomes and a central focus of U.S. health policy reforms (Institute of Medicine, 2001; Zuckerman et al., 2016). It directly impacts clinical outcomes, patient satisfaction, and resource allocation. However, estimating the true effect of hospital quality on healthcare outcomes is challenging due to potential endogeneity and the spatial uncertainty of hospital service areas. Therefore, **our key question is: Does higher hospital quality causally improve patient outcomes?**
 
 # 2. Methodology
 We use an instrumental variable (IV) strategy. Specifically, the distance to the nearest medical school, to causally estimate the impact of hospital quality on multiple hospital-level outcomes. To account for spatial uncertainty in defining hospital service areas, we implement and compare three geographic delineation methods: buffer zones, Voronoi polygons, and NHS-defined Hospital Service Areas (HSA).
